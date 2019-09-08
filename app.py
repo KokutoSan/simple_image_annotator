@@ -109,7 +109,7 @@ if __name__ == "__main__":
         if args.no_sort:
             files = filenames
         else:
-            files = sorted(filenames, key=lambda a: int(a.split(separator_character)[1][:-len(".png")]))
+            files = sorted(filenames, key=lambda a: int(a.split(separator_character)[-1][:-len(".png")]))
         break
     if files is None:
         print("No files")
